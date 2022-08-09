@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- using function -->
+    <button id="name" onclick="nameChange()">Want to change ?</button><br>
+
+    <!-- It will change text by getting the id after clicking the button -->
+    <button onclick="document.getElementById('time').innerHTML=Date();">What's the time ?</button>
+    <p id="time"> time is ? </p>
+
+    <!-- this keyword : perform task on it's own self. -->
+    <button onclick="this.innerHTML=Date();">It will change this text to time.</button>
+
+
+
+    <!-- EVENT PRACTICE:    -->
+    <br>
+    <br>
+    <!-- onblur: this convert text to uppercase while mouse insert is out from the input field. -->
+    <input type="text" name="" id="uppercase" placeholder="enter anything..." onblur="uppercase();">
+
+    <br>
+    <br>
+
+    <input type="text" name="" id="uppercase" placeholder="enter anything..." onfocus="backgroudColor(this);">
+
+    <p id="bg-color" onclick="backgroudColor(this);">Change backgroud color</p>
+
+
+
+    
+    <script src="event.js" ></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="name">This is ibrahim</h1>
+    <p>I am Ibrahim</p>
+    <button id="btn">Click me</button>
+
+    <span id="hover">Hove me</span>
+    <button id="btn2">Click me</button>
+
+    <script>
+        document.getElementById('btn').addEventListener("click",NameChanged);
+        function NameChanged( ){
+            document.querySelector("h1#name").innerHTML = "Sajeeb";
+            document.getElementsByTagName("p")[0].innerHTML = "Dihan";
+        }
+
+        // const hover = querySelector("button#btn2");
+        // hover.addEventListener('onclick',function(){querySelector("h1#hover").innerHTML = "Ibrahim"});
+
+        document.querySelector("button#btn2").addEventListener("resize",function(){
+            document.getElementById('hover').innerHTML = "Bangladesh";
+        });
+    </script>
+</body>
+</html>

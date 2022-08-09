@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        window.alert()
+        window.confirm()
+        window.prompt()
+     -->
+    <p id="alert"></p>
+    <p id="confirm"></p>
+    <button onclick="Confirm()">Click me to see confirm function work</button>
+    <p id="prompt"></p>
+
+    <script>
+        let alert, confirmFun, promptT, txt;
+        // alert function
+        alert = window.alert("This is an alert message!!");
+        // confirm function
+        function Confirm() {
+            if (confirm("Are you sure to proceed?")) {
+                txt = "you have pressed confirm";
+            }
+            else {
+                txt = "you clicked on cancel";
+            }
+            confirmFun = document.getElementById("confirm");
+            confirmFun.innerHTML = txt;
+        }
+        // prompt function
+        promptT = window.prompt("Enter your name: ");
+
+        if(promptT==null || promptT==''){
+            txt = "Sorry you have not typed anything";
+        }
+        else{
+            txt = "Hello "+ promptT + ", Have a Nice Day!";
+        }
+
+        document.getElementById("prompt").innerHTML = txt;
+
+
+    </script>
+</body>
+
+</html>

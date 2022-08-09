@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="divPara">
+        <p id="p1">This is first paragraph</p>
+        <p id="p2">Second Paragraph, bruder</p>         
+    </div>
+
+    <script>
+        const para = document.createElement('p');
+        const node = document.createTextNode("This node created by JavaScript Dom");
+        para.appendChild(node);
+
+        //const elementSection = document.getElementById('divPara');
+        const elementSection = document.getElementById('divPara');
+        const elementChild = document.getElementById('p1');
+        // elementSection.appendChild(para);
+        elementSection.insertBefore(para,elementChild);
+
+        //removing a node
+        const pElements = document.getElementById("p1");
+        pElements.remove();
+
+        //replacing child node
+        const Elements = document.getElementById("p2");
+        elementSection.replaceChild(Elements,pElements);
+    </script>
+</body>
+</html>

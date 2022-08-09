@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<!-- 
+    navigator.appName
+    navigator.appCodeName
+    navigator.platform
+    navigator.cookieEnabled
+    navigator.product
+    navigator.userAgent 
+    navigator.appVersion 
+    navigator.language
+    navigator.onLine 
+    navigator.javaEnabled()
+ -->
+    <p id="aN"></p>
+    <p id="acn"></p>
+    <p id="plat"></p>
+    <p id="ce"></p>
+    <p id="pro"></p>
+    <p id="userA"></p>
+    <p id="av"></p>
+    <p id="lng"></p>
+    <p id="onl"></p>
+    <p id="je"></p>
+
+ <script>
+    let aN,acn,plat,ce,pro,userA,av,lng,onl,je;
+    aN = document.getElementById("aN").innerHTML = "App Name : " + navigator.appName;
+    acn = document.getElementById("acn").innerHTML = "App Code Name : " + navigator.appCodeName;
+    plat = document.getElementById("plat").innerHTML = "Platform Name : " + navigator.platform;
+    ce = document.getElementById("ce").innerHTML = "Cookie Enabled : " + navigator.cookieEnabled;
+    pro = document.getElementById("pro").innerHTML = "Product Name : " + navigator.product;
+    userA = document.getElementById("userA").innerHTML = "User Agent Name : " + navigator.userAgent;
+    av = document.getElementById("av").innerHTML = "App Version : " + navigator.appVersion;
+    lng = document.getElementById("lng").innerHTML = "Language : " + navigator.language;
+    onl = document.getElementById("onl").innerHTML = "online : " + navigator.onLine;
+    plat = document.getElementById("plat").innerHTML = "Platform Name : " + navigator.platform;
+    je = document.getElementById("je").innerHTML = "javaEnabled : " + navigator.javaEnabled();
+ </script>
+    
+</body>
+</html>

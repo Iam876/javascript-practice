@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>This is CV</h1>
+    <span id="demo">Hello world</span>
+    <p class="className">I am Ibrahim Khalil</p>
+    <p class="className">I am 24 years old</p>
+    <p>Easter University</p>
+    <br><br>
+ 
+    <form action="/index.php"   name="form1" method="POST" onsubmit="return ValidationForm();">
+        First Name : <input type="text" name="fname" placeholder="Enter first name" value=""><br>
+        Last Name : <input type="text" name="lname" placeholder="Enter last name" value=""><br>
+        <input type="button" value="submit">
+    </form>
+
+<abbr title="ibrahim.jpg"><img id="image" src="ibrahim.jpg" alt=""></abbr>
+
+
+<p id="form-output"></p>
+
+    <script>
+        // form validation start
+       
+        // form validation end
+
+        // form start
+        const x = document.forms['form1'];
+        let text = '';
+        for(let i=0;i<x.length;i++){
+            text+=x.elements[i].value+"<br>";
+        }
+
+        document.getElementById("form-output").innerHTML=text;
+
+
+        // form end
+
+        //attribute property changing START
+        const img = document.getElementsByTagName("img");
+        img[0].src = "download.png";
+
+        document.getElementsByTagName("abbr")[0].title = "This is javascript images";
+
+         //document.getElementById("image").src="bangladesh.jpg";
+       
+       // img.src = "Bangladesh.jpg";
+        //attribute property changing END
+
+
+
+
+
+
+
+
+
+        const id = document.getElementById("demo");
+        id.innerHTML = "This is span tag and changed by javascript";
+
+        let tag_p = document.getElementsByTagName("p");
+        tag_p.length;
+
+        const className = document.getElementsByClassName('className');
+        className[1].innerHTML = 'Ibrahim';
+
+        const qse = document.querySelectorAll('.className');
+        qse[0].innerHTML = "hahaha";
+
+    </script>
+</body>
+
+</html>

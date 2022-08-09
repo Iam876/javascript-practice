@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        window.location.href
+        window.location.hostname
+        window.location.pathname
+        window.location.protocol
+        window.location.assign()
+     -->
+     <p id="fullLocation"></p>
+     <p id="hostName"></p>
+     <p id="pathName"></p>
+     <p id="protoName"></p>
+     <p id="assign"></p>
+     <p id="port"></p>
+     <script>
+        let fullLocation,hostName,pathName,protoName,assign;
+        fullLocation = document.getElementById("fullLocation").innerHTML = "Full url location: "+window.location.href;
+        hostName = document.getElementById("hostName").innerHTML = "Hostname: "+window.location.hostname;
+        pathName = document.getElementById("pathName").innerHTML = "PathName: "+window.location.pathname;
+        protoName = document.getElementById("protoName").innerHTML = "protocol Name: "+window.location.protocol;
+        port = document.getElementById("port").innerHTML = "port Name: "+window.location.port;
+         //assign = document.getElementById("assign").innerHTML = "Assign: "+window.location.assign("https://google.com");
+     </script>
+</body>
+
+</html>

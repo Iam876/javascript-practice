@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="box">
+        <p id="width"></p>
+        <p id="height"></p>
+        <button onclick="openTab()">Open google</button>
+        <button onclick="closeGoogle()">close google</button><br><br><br><br>
+        <button onclick="moveTab()">MoveTo</button>
+        <button onclick="closeGoogle()">ResizeTo</button>
+
+
+        <!-- 
+            screen.width
+            screen.height
+            screen.availWidth
+            screen.availHeight
+            screen.colorDepth
+            screen.pixelDepth
+         -->
+         <p id="sw"></p>
+         <p id="sh"></p>
+         <p id="aw"></p>
+         <p id="ah"></p>
+         <p id="co"></p>
+         <p id="pd"></p>
+
+    </div>
+    <script>
+        let windowOpen, NewWindow,sw,sh,aw,ah,co,pd;
+        const width = document.getElementById("width");
+        const height = document.getElementById("height");
+        width.innerHTML = "Width of the screen is: " + window.innerWidth;
+        height.innerHTML = "height of the screen is: " + window.innerHeight;
+
+        sw = document.getElementById("sw").innerHTML="Screen width:"+screen.width;
+        sw = document.getElementById("sh").innerHTML="Screen height:"+screen.height;
+        sw = document.getElementById("aw").innerHTML="avail width:"+screen.availWidth;
+        sw = document.getElementById("ah").innerHTML="avail height:"+screen.availHeight;
+        sw = document.getElementById("co").innerHTML="Color depth:"+screen.colorDepth;
+        sw = document.getElementById("pd").innerHTML="Pixel depth:"+screen.pixelDepth;
+
+
+        function openGoogle() {
+            windowOpen = window.open("https://google.com");
+        }
+        function closeGoogle() {
+            windowOpen.close();
+        }
+        function openTab() {
+            NewWindow = window.open('', 'width=50px', 'height=50px');
+            NewWindow.document.write("<p>This is new open function</p>")
+        }
+        function moveTab() {
+            NewWindow.moveTo(1500, 150);
+        }
+    </script>
+</body>
+
+</html>
